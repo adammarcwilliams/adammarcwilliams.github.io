@@ -29,3 +29,18 @@ This takes the touch controllers one step further and brings proper models that 
 
 #### Oculus Platform SDK
 Finally, if you want to replace the default blue Avatar with your users custom one from Oculus Home then this enables you to do just that.
+
+With that out of the way, lets get started.
+
+### Tilt Brush Scene
+
+Suprisingly, I've not found very many detailed guides on using Tilt Brush and the in-app tutorial is just a series of tool tips. This isn't much of a sticking point though as the process is very intuitive so my best advice would be to just get stuck in and see what all the different tools do.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Well... first attemp with <a href="https://twitter.com/hashtag/TiltBrush?src=hash">#TiltBrush</a> and I&#39;ve managed to make a psychedelic mess 🤣 <a href="https://t.co/iGzaDxqklS">pic.twitter.com/iGzaDxqklS</a></p>&mdash; Adam Marc Williams (@amwcodes) <a href="https://twitter.com/amwcodes/status/834886932651986944">February 23, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Luckily my second attempt went better and that is what we will be using for this project.
+
+![_config.yml]({{ site.baseurl }}/images/tilt-brush-groot.png)
+
+One tip I can give is that Tilt Brush allows you to bring in reference material such as images or plain 3D models for you to use as guides. Big thank you to Corentin who made this model of [Dancing Groot](https://sketchfab.com/models/90fe6093ac5747b9a59c0b3317f5808c) available to download on SketchFab.
