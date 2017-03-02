@@ -3,8 +3,6 @@ layout: post
 title: Painting Interactive VR Experiences with TiltBrush & Unity
 ---
 
-## Painting Interactive VR Experiences with TiltBrush & Unity
-
 Google’s Tilt Brush finally came to the Oculus Rift recently, optimized for Oculus’s Touch Controllers.
 
 If you’ve not had a chance to play with this yet, I highly recommend giving it a whirl. The experience of painting/illustrating 3D scenes in VR is really something, and Tilt Brush makes the process extremely intuitive.
