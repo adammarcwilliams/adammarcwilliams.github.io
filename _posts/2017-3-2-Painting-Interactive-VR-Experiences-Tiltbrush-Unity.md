@@ -41,6 +41,6 @@ Suprisingly, I've not found very many detailed guides on using Tilt Brush and th
 
 Luckily my second attempt went better and that is what we will be using for this project.
 
-![_config.yml]({{ site.baseurl }}/images/tilt-brush-groot.png)
+![Tilt Brush Groot]({{ site.baseurl }}/images/tilt-brush-groot.png)
 
 One tip I can give is that Tilt Brush allows you to bring in reference material such as images or plain 3D models for you to use as guides. Big thank you to Corentin who made this model of [Dancing Groot](https://sketchfab.com/models/90fe6093ac5747b9a59c0b3317f5808c) available to download on SketchFab.
