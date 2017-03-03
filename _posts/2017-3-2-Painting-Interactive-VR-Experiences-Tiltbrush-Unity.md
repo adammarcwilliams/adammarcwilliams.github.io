@@ -137,5 +137,5 @@ This is a bug in my code I still need to refactor but I will probably solve by a
 
 And here is the finished project...
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/IkXbWpx-4us?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/IkXbWpx-4us?rel=0" frameborder="0" allowfullscreen></iframe>
 
