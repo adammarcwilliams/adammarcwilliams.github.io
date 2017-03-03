@@ -41,6 +41,101 @@ Suprisingly, I've not found very many detailed guides on using Tilt Brush and th
 
 Luckily my second attempt went better and that is what we will be using for this project.
 
-![Tilt Brush Groot]({{ site.baseurl }}/images/tilt-brush-groot.gif)
+![Dancing Groot]({{ site.baseurl }}/images/tilt-brush-groot.png)
 
 One tip I can give is that Tilt Brush allows you to bring in reference material such as images or plain 3D models for you to use as guides. Big thank you to Corentin who made this model of [Dancing Groot](https://sketchfab.com/models/90fe6093ac5747b9a59c0b3317f5808c) available to download on SketchFab.
+
+### Setting-Up Oculus SDK's
+
+Included with the Oculus SDK is a Unity Package that makes getting started a breeze. Import this asset into your project, check "Virtual Reality Supported" in the Player settings and choose the Oculus SDK, then drag the OVRCamera prefab into your scene and click play. Hey presto, you're in VR!
+
+The Avatar SDK however is a different story. Especially when we want to be able to set colliders for each of our fingers rather than one big collider for your hand.
+
+After banging my head a little I happened upon this fantastic tutorial by Gerald McAlister which explains how the Avatars actually work and takes you through the modifications we'll need to make to the SDK to dynamically apply colliders that track with our fingers.
+
+[Oculus Touch and Finger Stuff](http://www.rgbschemes.com/blog/oculus-touch-and-finger-stuff-part-1/)
+
+### Importing our Tilt Brush Scene
+
+Once you've completed your Tilt Brush you need to this as a 3D object and import it into Unity. 
+
+    To export a sketch:
+    Open Tilt Brush, load your sketch
+    Click the [...] icon in the settings area of your hand menu
+    Click the Labs icon
+    Hit Export in the floating window that pops up
+
+    To import a sketch into your scene:
+    Copy the .FBX file (in My Documents/Tilt Brush/Exports on Windows or Documents/Tilt Brush/Exports in Mac) into your Unity project
+    Drag the file from the Project window into the Hierarchy
+[Tilt Brush Unity SDK: Using Tilt Brush with Unity](https://docs.google.com/document/d/1YID89te9oDjinCkJ9R65bLZ3PpJk1W4S1SM2Ccc6-9w)
+
+I placed this on top of a large cube in my scene so that it was at a decent height and then added a simple cylinder object ready for us to use as a button.
+
+First though we needed to enable the Audio Reactivy to the scene by adding an AudioSource and then including the TiltBrush Audio Reactivty prefab that comes with their tool kit.
+
+### Scripting our Button
+
+I remived the dafault collider on our button and replaced it with a mesh collider for accuracy and checked Is Trigger.
+
+This gives us access to Unity's OnTrigger methods when we create our Button script and attach it to the Button Game Object.
+
+``` c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Button : MonoBehaviour {
+
+	[SerializeField] AudioSource audioSource;
+	[SerializeField] GameObject electricity;
+	private Renderer electricRender;
+
+	private bool isOn = false;
+
+	// Use this for initialization
+	void Start () {
+		audioSource.GetComponent<AudioSource>();
+		electricRender = electricity.GetComponent<Renderer>();
+		electricRender.enabled = false;
+	}
+
+	void OnTriggerEnter (Collider other) {
+		if (other.gameObject.name.Contains("index3") || other.gameObject.name.Contains("HandAnchor")) {
+			if (isOn == false) {
+				audioSource.Play();
+				this.electricRender.enabled = true;
+				isOn = true;
+			} else {
+				audioSource.Pause();
+				electricRender.enabled = false;
+				isOn = false;
+			}
+		}
+	}
+
+}
+
+```
+Let's quickly run through this script from the top so you can understand exactly what's going on.
+
+The first thing we do is grab access to our AudioSource and the electric rainbow that arcs behind our Dancing Groot so that they can be accessed from this script.
+
+Then we use the OnTriggerEnter method that we exposed, toggling them on and off when our finger collider touches the button collider.
+
+One thing to note is the extra conditional logic I added before checking the buttons isOn state.
+
+`
+if (other.gameObject.name.Contains("index3") || other.gameObject.name.Contains("HandAnchor"))
+`
+
+This checks that the hand is either the whole hand itself (no buttons pressed) or that the collider triggering the button is the tip of the index finger. At first I had ommitted this but found when I pressed it using a pointed finger, I would trigger multiple colliders at once, often negating the effect of the trigger by turning it on and off again instantaniously.
+
+If we were to push our finger too far *through* the button this can still happen. The finger tip ("index3") leaves the buttons collider zone and then when we pull the finger back out it retriggers it agin.
+
+This is a bug in my code I still need to refactor but I will probably solve by adding some sort of a cooling off period to the button so it can't be triggered repeatedly within milliseconds of each collide.
+
+And here is the finished project...
+
+@[Painting Interactive VR Experiences with Tilt Brush & Unity](https://youtu.be/IkXbWpx-4us)
+
