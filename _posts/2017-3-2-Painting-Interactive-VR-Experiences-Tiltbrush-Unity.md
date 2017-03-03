@@ -137,7 +137,7 @@ The finger tip ("index3") leaves the buttons collider zone (OnTriggerExit) and t
 
 This is a bug I still need to fix but I will probably solve it by adding some sort of a cooling off period to the button so it can't be triggered repeatedly within milliseconds of each collide.
 
-And here is the results...
+And here are the results...
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/IkXbWpx-4us?rel=0" frameborder="0" allowfullscreen></iframe>
 
