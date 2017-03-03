@@ -19,7 +19,7 @@ As well as being my first time using a Tilt Brush creation in VR, this was also 
 - Import the Tilt Brush models into my scene and configure Audio Reactivity.
 - Create an interactive object that toggles the music on/off and responds to touch.
 
-Oculus have some great developer documentation that will give you detailed information on each of their SDK's but for the sake of this article, here is a quick overview of what we'll be using each for.
+[Oculus have some great developer documentation](https://developer.oculus.com/) that will give you detailed information on each of their SDK's but for the sake of this article, here is a quick overview of what we'll be using each for.
 
 #### Oculus SDK
 This is the starting point for developing with Unity and gives you their OVRCamera prefab which represents the headset in VR and gives you access to the touch controllers inputs.
@@ -41,7 +41,7 @@ Suprisingly, I've not found very many detailed guides on using Tilt Brush and th
 
 Luckily my second attempt went better and that is what we will be using for this project.
 
-![Dancing Groot]({{ site.baseurl }}/images/tilt-brush-groot.png)
+![Tilt Brush Groot]({{ site.baseurl }}/images/tilt-brush-groot.gif)
 
 One tip I can give is that Tilt Brush allows you to bring in reference material such as images or plain 3D models for you to use as guides. Big thank you to Corentin who made this model of [Dancing Groot](https://sketchfab.com/models/90fe6093ac5747b9a59c0b3317f5808c) available to download on SketchFab.
 
@@ -49,7 +49,7 @@ One tip I can give is that Tilt Brush allows you to bring in reference material 
 
 Included with the Oculus SDK is a Unity Package that makes getting started a breeze. Import this asset into your project, check "Virtual Reality Supported" in the Player settings and choose the Oculus SDK, then drag the OVRCamera prefab into your scene and click play. Hey presto, you're in VR!
 
-The Avatar SDK however is a different story. Especially when we want to be able to set colliders for each of our fingers rather than one big collider for your hand.
+The Avatar SDK however is a different story. Especially when we want to be able to set colliders for each of our fingers rather than just one big collider for your hand.
 
 After banging my head a little I happened upon this fantastic tutorial by Gerald McAlister which explains how the Avatars actually work and takes you through the modifications we'll need to make to the SDK to dynamically apply colliders that track with our fingers.
 
@@ -57,7 +57,7 @@ After banging my head a little I happened upon this fantastic tutorial by Gerald
 
 ### Importing our Tilt Brush Scene
 
-Once you've completed your Tilt Brush you need to this as a 3D object and import it into Unity. 
+Once you've got that out the way and you've completed your Tilt Brush you need to export this as a 3D object and then import it into Unity. 
 
     To export a sketch:
     Open Tilt Brush, load your sketch
@@ -68,15 +68,16 @@ Once you've completed your Tilt Brush you need to this as a 3D object and import
     To import a sketch into your scene:
     Copy the .FBX file (in My Documents/Tilt Brush/Exports on Windows or Documents/Tilt Brush/Exports in Mac) into your Unity project
     Drag the file from the Project window into the Hierarchy
+    
 [Tilt Brush Unity SDK: Using Tilt Brush with Unity](https://docs.google.com/document/d/1YID89te9oDjinCkJ9R65bLZ3PpJk1W4S1SM2Ccc6-9w)
 
 I placed this on top of a large cube in my scene so that it was at a decent height and then added a simple cylinder object ready for us to use as a button.
 
-First though we needed to enable the Audio Reactivy to the scene by adding an AudioSource and then including the TiltBrush Audio Reactivty prefab that comes with their tool kit.
+First though we needed to enable Audio Reactivity in the scene by adding an AudioSource and then including the TiltBrush Audio Reactivty prefab that comes with their tool kit.
 
 ### Scripting our Button
 
-I remived the dafault collider on our button and replaced it with a mesh collider for accuracy and checked Is Trigger.
+I removed the default collider on our button and replaced it with a mesh collider for accuracy and checked *Is Trigger*.
 
 This gives us access to Unity's OnTrigger methods when we create our Button script and attach it to the Button Game Object.
 
@@ -129,13 +130,16 @@ One thing to note is the extra conditional logic I added before checking the but
 if (other.gameObject.name.Contains("index3") || other.gameObject.name.Contains("HandAnchor"))
 `
 
-This checks that the hand is either the whole hand itself (no buttons pressed) or that the collider triggering the button is the tip of the index finger. At first I had ommitted this but found when I pressed it using a pointed finger, I would trigger multiple colliders at once, often negating the effect of the trigger by turning it on and off again instantaniously.
+This checks that the hand is either the whole controller itself (no buttons pressed) or that the collider triggering the button is the tip of the index finger. At first I had ommitted this but found when I pressed it using a pointed finger, I would trigger multiple colliders at once, often negating the effect of the trigger by turning it on and off again instantaniously. This happened because the finger contains three different colliders.
 
-If we were to push our finger too far *through* the button this can still happen. The finger tip ("index3") leaves the buttons collider zone and then when we pull the finger back out it retriggers it agin.
+This can still happend if we were to push our finger too far *through* the button. 
+The finger tip ("index3") leaves the buttons collider zone (OnTriggerExit) and then when we pull the finger back out it retriggers it again.
 
-This is a bug in my code I still need to refactor but I will probably solve by adding some sort of a cooling off period to the button so it can't be triggered repeatedly within milliseconds of each collide.
+This is a bug I still need to fix but I will probably solve it by adding some sort of a cooling off period to the button so it can't be triggered repeatedly within milliseconds of each collide.
 
-And here is the finished project...
+And here is the results...
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/IkXbWpx-4us?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
 
