@@ -4,12 +4,13 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I'm an Interactive Developer specialising in Digital Experiential Marketing with a background in Fashion Photography
+& Film-Making.
 
-### More Information
+### Current Obsessions
 
-A place to include any other types of information that you'd like to include about yourself.
+Interactive storytelling with VR Games & Mixed Reality.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+adam@adammarcwilliams.co.uk](mailto:adam@adammarcwilliams.co.uk)
