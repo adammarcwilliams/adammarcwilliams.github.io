@@ -137,5 +137,5 @@ This is a bug in my code I still need to refactor but I will probably solve by a
 
 And here is the finished project...
 
-@[Painting Interactive VR Experiences with Tilt Brush & Unity](https://youtu.be/IkXbWpx-4us)
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/IkXbWpx-4us?rel=0" frameborder="0" allowfullscreen></iframe>
 
