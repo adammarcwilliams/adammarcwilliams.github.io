@@ -97,7 +97,7 @@ Lastly we add Oculus's ONSP Audio Source script to the same prefab and again che
 
 And that's that. Now when we play our scene and experience it in VR we can here each cube emitting it's own audio source which moves throughout the space as they rotate.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Ug7MsO8wiS0" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/Ug7MsO8wiS0?rel=0" frameborder="0" allowfullscreen></iframe>
 
 You might not be able to here the effect as clearly in the video as when using a headset but the most pronounced moments are when all the cube align and slingshot around the centre at once before spreading out again.
 
