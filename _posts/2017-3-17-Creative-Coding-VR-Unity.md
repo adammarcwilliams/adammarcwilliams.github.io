@@ -61,7 +61,7 @@ One of these was a *depth of field* effect and the other some *bloom*.
 
 Depth of Field should be avoided in VR as the current headsets don't support eye-tracking, meaning realistic depth of field that follows where you focus is out of the question. 
 
-This doesn't matter so much when your viewing a 2D screen and is in fact a great tool photographers and film-makers use to draw your attention to focus points in an image or scene but in VR it's a real immersion breaker.
+This doesn't matter so much when you're viewing a 2D screen and is in fact a great tool photographers and film-makers use to draw your attention to focus points in an image or scene but in VR it's a real immersion breaker.
 
 Bloom however can still be used assuming your scene can afford the CPU cost of the effect.
 
@@ -73,7 +73,7 @@ The CenterEyeAnchor is the view you will see in your Unity game tab when playing
 
 Simply apply the bloom effect script to each of these and you're good to go.
 
-This should also demonstrate why full screen effects can be so expensive when developing for VR as your are actually running three different instances of it. The same goes for *everything else* in your scene which is why optimisations become so important.
+This should also demonstrate why full screen effects can be so expensive when developing for VR as you're actually running three different instances of it. The same goes for *everything else* in your scene which is why optimisations become so important.
 
 ### Oculus Audio SDK
 
@@ -81,7 +81,7 @@ One of the key components to creating immersive environments in VR is sound.
 
 We can't just throw some sound effects on a stereo track and be done with is as you need to be able to distinguish where different sounds are coming from and pinpoint them with accuracy as in real life.
 
-Oculus and unity have made this surprisingly easy for us and after installing the Audio SDK it only took a few simple steps.
+Oculus and unity have made this surprisingly easy for us and after installing the [Audio SDK](https://developer3.oculus.com/documentation/audiosdk/latest/) it only took a few simple steps.
 
 ![Oculus Audio SDK]({{ site.baseurl }}/images/unity-ovr-audio.png)
 
@@ -97,6 +97,13 @@ Lastly we add Oculus's ONSP Audio Source script to the same prefab and again che
 
 And that's that. Now when we play our scene and experience it in VR we can here each cube emitting it's own audio source which moves throughout the space as they rotate.
 
+<iframe width="640" height="360" src="https://www.youtube.com/embed/Ug7MsO8wiS0" frameborder="0" allowfullscreen></iframe>
+
 You might not be able to here the effect as clearly in the video as when using a headset but the most pronounced moments are when all the cube align and slingshot round the centre at once before spreading out again.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Ug7MsO8wiS0" frameborder="0" allowfullscreen></iframe>
+There is obviously far more the Oculus Audio SDK can do but for the purpose of this experiment I found this simple method sufficient.
+
+Were I to continue with this project(sketch??) I think the next thing I'd do is add some interactivity.
+
+
+
