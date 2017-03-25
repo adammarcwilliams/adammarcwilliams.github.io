@@ -37,7 +37,7 @@ So what does Time.deltaTime do?
 
 > If you add or subtract to a value every frame chances are you should multiply with Time.deltaTime. When you multiply with Time.deltaTime you essentially express: I want to move this object 10 meters per second instead of 10 meters per frame.
 
-In our example we have two values being changed every time our update loop is called. Our rotation speed and our spin speed.
+In our example we have two values being changed every time our update loop is called. Our spin speed and our rotate speed.
 
 If we were to times these by Time.deltaTime, instead of the change being applied once per frame it would be applied once per second. This would obviously be far too slow so we could times it by 90 (this is the frame rate the Oculus Rift runs at) and we would be back to it changing 90 times every second, only this time reliably instead of relying on frame rates which can fluctuate.
 
