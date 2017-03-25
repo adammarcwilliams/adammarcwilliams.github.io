@@ -99,7 +99,7 @@ And that's that. Now when we play our scene and experience it in VR we can here 
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/Ug7MsO8wiS0" frameborder="0" allowfullscreen></iframe>
 
-You might not be able to here the effect as clearly in the video as when using a headset but the most pronounced moments are when all the cube align and slingshot round the centre at once before spreading out again.
+You might not be able to here the effect as clearly in the video as when using a headset but the most pronounced moments are when all the cube align and slingshot around the centre at once before spreading out again.
 
 There is obviously far more the Oculus Audio SDK can do but for the purpose of this experiment I found this simple method sufficient.
 
