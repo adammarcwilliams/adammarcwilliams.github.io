@@ -39,7 +39,7 @@ So what does Time.deltaTime do?
 
 In our example we have two values being changed every time our update loop is called. Our spin speed and our rotate speed.
 
-If we were to times these by Time.deltaTime, instead of the change being applied once per frame it would be applied once per second. This would obviously be far too slow so we could times it by 90 (this is the frame rate the Oculus Rift runs at) and we would be back to it changing 90 times every second, only this time reliably instead of relying on frame rates which can fluctuate.
+If we were to times these by Time.deltaTime, instead of the distance of our movement happening once per frame it would take a whole second. This would obviously be far too slow so we could times it by 90 (this is the frame rate the Oculus Rift runs at) and we would be back to it being applied 90 times every second, only this time reliably instead of relying on frame rates which can fluctuate.
 
 In my version I actually settled on multiplying them by 60 to slow the motion down a little.
 
