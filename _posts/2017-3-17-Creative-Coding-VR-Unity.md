@@ -21,7 +21,7 @@ Today's blog post is to share the results of following this tutorial and show yo
 
 I highly recommend you complete Rick's tutorial first so you have an understanding of the scene that has been created.
 
-I won't cover the basics of enabling VR in your project as I alluded to this in my last [https://adammarcwilliams.github.io/Painting-Interactive-VR-Experiences-Tiltbrush-Unity/](blog post here) and shared the relevant resource for the Oculus SDK.
+I won't cover the basics of enabling VR in your project as I alluded to this in my last [blog post here](https://adammarcwilliams.github.io/Painting-Interactive-VR-Experiences-Tiltbrush-Unity/) and shared the relevant resource for the Oculus SDK.
 
 Instead we'll look at the following three additions I made to the project:
 
@@ -89,7 +89,7 @@ The first is to enable the SDK by going to Edit > Project Settings > Audio Manag
 
 Second is to add a Unity Audio Source to your spinCube prefab and check the spatialize box.
 
-I used the *Metal High Engine Tone* which came with the free [https://www.assetstore.unity3d.com/en/#!/content/60151](Mechanical Exploration SFX) pack on the asset store.
+I used the *Metal High Engine Tone* which came with the free [Mechanical Exploration SFX](https://www.assetstore.unity3d.com/en/#!/content/60151) pack on the asset store.
 
 I had to convert the sample to Mono first though which you should always do when dealing with audio samples for VR.
 
