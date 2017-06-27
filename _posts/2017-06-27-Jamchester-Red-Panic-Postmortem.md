@@ -3,8 +3,6 @@ layout: post
 title: Jamchester 2017 Red Panic Postmortem
 ---
 
-## Jamchester 2017 - Red Panic Postmortem
-
 With the madness of this 48 hour game jam over and the sleep deprivation subsiding, I thought it was about time to take stock of what I learnt.
 
 This was both my first game jam and the first game I've finished to a playable state that wasn't following a tutorial series (nothing like a deadline & some team mates to add the pressure to finish).
