@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Devlog: Falling Arrow - One Sheet GDD
+title: Devlog Falling Arrow - One Sheet GDD
 ---
 
 2017 has been a year of starting way more projects than finishing and the sticking point always seems to be 3D assets.
@@ -14,7 +14,7 @@ Not only will this project avoid characters like the plague but I'm also keeping
 I will also be documenting the entire process here starting with my one sheet game design document.
 
 #### Falling Arrow
-[INSERT lovecraft-alien.jpg]
+![Lovecraft Alien]({{ site.baseurl }}/images/lovecraft-alien.jpg)
 ###### A Tetris, Lovecraft, Hunger Games Mashup
 
 **Genre:**	VR Puzzle Archery
