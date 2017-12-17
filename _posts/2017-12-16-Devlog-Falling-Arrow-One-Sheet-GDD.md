@@ -11,7 +11,7 @@ With this in mind and some extra time off over Christmas, I've decided to sink m
 
 Not only will this project avoid humanoid characters like the plague but I'm also keeping geometry to a bare minimum and using only assets that can be created in Google Blocks.
 
-I will also be documenting the entire process here starting with my one sheet game design document.
+I will be documenting the entire process here starting with my one sheet game design document.
 
 #### Falling Arrow
 ![Lovecraft Alien]({{ site.baseurl }}/images/lovecraft-alien.jpg)
