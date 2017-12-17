@@ -9,7 +9,7 @@ The abition for my projects far outweight my 3D Modelling and animation skills, 
 
 With this in mind and some extra time off over Christmas, I've decided to sink my teeth into (yet another) new project but this time designing around my limitations from the getgo.
 
-Not only will this project avoid characters like the plague but I'm also keeping geometry to a bare minimum and using only assets that can be created in Google Blocks.
+Not only will this project avoid humanoid characters like the plague but I'm also keeping geometry to a bare minimum and using only assets that can be created in Google Blocks.
 
 I will also be documenting the entire process here starting with my one sheet game design document.
 
