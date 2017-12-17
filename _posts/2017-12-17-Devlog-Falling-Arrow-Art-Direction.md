@@ -32,7 +32,7 @@ I removed the directional light from the scene and replaced it with a red point 
 
 ![Point Light]({{ site.baseurl }}/images/point-light.jpg)
 
-The rest of the scenes illumination comes from the fog which I tinted cyan and emissive materials on the mmodels and vertical planes which along with some dust particles gives the scene the moody astmospherics I was after.
+The rest of the scenes illumination comes from the fog which I tinted cyan and emissive materials on the models and vertical planes which along with some dust particles gives the scene the moody astmospherics I was after.
 
 Finally I added a couple of emissive cubes to visualise how the game play might look.
 
