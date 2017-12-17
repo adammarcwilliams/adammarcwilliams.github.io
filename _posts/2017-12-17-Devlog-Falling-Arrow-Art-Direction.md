@@ -22,17 +22,17 @@ I started by taking the monolith references and creating a simple model in Googl
 
 I made sure to use some cutout geometry to give it a distinctive silhouette that will show through the fog and created a couple of elements in a different color which I can swap out with an emissive material in Unity.
 
-For my creature I decided not to spend ages right now creating my own eldrith horror and used [The Vacuum Bot by Danny Bittman](https://poly.google.com/view/6rUwBqoeun5) as a place holder.
+For my creature I decided not to spend ages right now creating my own eldritch horror and used [The Vacuum Bot by Danny Bittman](https://poly.google.com/view/6rUwBqoeun5) as a place holder.
 
 #### Unity 2017
 
-Once I imported these assets into Unity I disabled the skybox and created a large box enviroment I could use to limit the distance field which worked nicely with Unity's exponential fog.
+Once I imported these assets into Unity I disabled the skybox and created a large box enviroment with six planes I could use to limit the distance field which worked nicely with Unity's exponential fog.
 
 I removed the directional light from the scene and replaced it with a red point light that highlights the play area and appears to come from the creature.
 
 ![Point Light]({{ site.baseurl }}/images/point-light.jpg)
 
-The rest of the scenes illumination comes from the fog which I tinted cyan and emissive materials on the meshes which along with some dust particles gives the scene the moody astmospherics I was after.
+The rest of the scenes illumination comes from the fog which I tinted cyan and emissive materials on the mmodels and vertical planes which along with some dust particles gives the scene the moody astmospherics I was after.
 
 Finally I added a couple of emissive cubes to visualise how the game play might look.
 
