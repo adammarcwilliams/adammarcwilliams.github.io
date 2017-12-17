@@ -11,7 +11,7 @@ My 3D modelling and character animation skills are virtually non-existent but I 
 
 So what does Lovecraftian Sci-Fi look like? I'm picturing alien landscapes with huge monoliths and a vast godlike creature towering over our player, maybe a cybernetic Cuthulu.
 
-I pulled some reference material together into a mood-board along with some reference from other VR experiences.
+I pulled some reference material together into a mood-board to start from.
 
 ![Falling Arrow Moodboard]({{ site.baseurl }}/images/falling-arrow-moodboard.jpg)
 
