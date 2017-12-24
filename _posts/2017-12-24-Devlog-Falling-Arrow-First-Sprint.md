@@ -33,7 +33,6 @@ Next was to create four paths between the creature and the ground that the cubes
 Luckily I already had my own [Unity Path Tools](https://github.com/adammarcwilliams/unity-path-tools) on Github as a result of a fabulous [CatLikeCoding](http://catlikecoding.com/unity/tutorials/) tutorial I followed on Bezier Splines.
 
 ![Path Tools]({{ site.baseurl }}/images/Path-Tools.jpg)
-[INSERT Path-Tools.jpg]
 
 I used this to create four paths, each assigned to a different game object that I grouped together under the creature and added the SplineWalker component from my path tools to the breakableCube prefab. This is what controls the movement along the Bezier path and I changed it to use the current game speed to modify the speed it travels at along the path (it will read this from the Game Controller that I will be creating shortly).
 
