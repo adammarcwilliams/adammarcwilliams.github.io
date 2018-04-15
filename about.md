@@ -13,4 +13,4 @@ Interactive storytelling with VR & Mixed Reality.
 
 ### Contact me
 
-adam@adammarcwilliams.co.uk](mailto:adam@adammarcwilliams.co.uk)
+[adam@adammarcwilliams.co.uk](mailto:adam@adammarcwilliams.co.uk)
